@@ -1,0 +1,13 @@
+<div class="placeholder">
+<div class="content">
+	<div class="video">
+		<iframe src="//player.vimeo.com/video/<%- preview_vid ? preview_vid : vid %>?api=1&autoplay=<%- autoplay ? 1 : 0 %>&loop=<%- loop ? 1 : 0 %><%- color ? '&color=' + color.replace('#', '') : '' %>&title=<%- title ? 1 : 0 %>&byline=<%- byline ? 1 : 0 %>&portrait=<%- portrait ? 1 : 0 %>" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+	</div>
+	<div class="info">
+		<% if (vid || sample) {%><div class="links">
+			<% if (sample) { %><a href="<%- sample %>">Download Sample (<%- sample_type() %>)</a><% } %>
+			<% if (sample && preview_vid && vid) { %><span> · </span><% } %>
+			<% if (preview_vid && vid) { %><a href="https://vimeo.com/<%- vid %>">View More on Vimeo.com</a><% } %>
+		</div><% } %>
+	</div>
+</div>

@@ -1,0 +1,64 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+        <link rel="stylesheet" href="css/screen.css">
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!--nav class="navbar navbar-default navbar-inverse navbar-fixed-top">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <a class="navbar-brand" href="#">Keynote Savants</a>
+            </div>
+
+            <div>
+                <span>by <a href="http://almaemadi.com/">Alma Emadi</a> and <a href="http://kohlmannj.com/">Joe Kohlmann</a></span>
+                <a type="button" class="btn btn-default navbar-btn" href="#">Hire Us</a>
+            </div>
+          </div>
+        </nav-->
+
+        <div class="jumbotron">
+            <div class="container-fluid">
+                <h1>Keynote Savants</h1>
+                <p>Slide Designs by <br class="hidden-sm hidden-md hidden-lg"><a href="http://almaemadi.com/">Alma Emadi</a> and <a href="http://kohlmannj.com/">Joe Kohlmann</a><span class="hidden-xs"> · </span><br class="hidden-sm hidden-md hidden-lg"><br class="hidden-sm hidden-md hidden-lg"><a id="hire" class="btn btn-lg" href="#">Hire Us!</a></p>
+            </div>
+        </div>
+
+        <div class="container-fluid">
+            <div id="decks" class="row"></div>
+        </div>
+
+        <footer>© 2013–2015 Alma Emadi and Joe Kohlmann; Keynote is a trademark of Apple Inc., registered in the U.S. and other countries.</footer>
+
+        <script data-main="main" src="bower_components/requirejs/require.js"></script>
+        <script>
+            require.config({
+                baseUrl: 'js',
+                paths: {
+                    'text':       ['../bower_components/requirejs-text/text'],
+                    'html':       ['../bower_components/requirejs-html/html'],
+                    'main':       ['main'],
+                    'jquery':     ['//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min',
+                                   '../bower_components/jquery/dist/jquery.min'],
+                    'underscore': ['//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min',
+                                   '../bower_components/underscore/underscore'],
+                    'backbone':   ['//cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.2/backbone-min',
+                                   '../bower_components/backbone/backbone'],
+                    'marionette': ['//cdnjs.cloudflare.com/ajax/libs/backbone.marionette/2.4.1/backbone.marionette',
+                                   '../bower_components/marionette/lib/backbone.marionette']
+                }
+            });
+        </script>
+    </body>
+</html>
